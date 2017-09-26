@@ -1,10 +1,11 @@
-//
-//  CalculatorTests.swift
-//  CalculatorTests
-//
-//  Created by santhosh on 2017-09-23.
-//  Copyright © 2017 Santhosh Damodharan. All rights reserved.
-//
+/*
+ * File Name : ViewController.swift
+ * Name : Santhosh Damodharan
+ * Date : 2017-09-23
+ * StudentID : 300964037
+ * Description : Simple calculator which performs basic opertions
+ * Version : 1.0 - Built operation flow
+ */
 
 import XCTest
 @testable import Calculator
