@@ -113,9 +113,7 @@ class ViewController: UIViewController {
             {
                 results = previousNumber + numberOnScreen
                 displayLabel.text = String (results)
-
             }
-            
         }
     }
     
