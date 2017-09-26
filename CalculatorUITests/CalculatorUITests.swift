@@ -4,7 +4,7 @@
  * Date : 2017-09-23
  * StudentID : 300964037
  * Description : Simple calculator which performs basic opertions
- * Version : 1.0 - Built operation flow
+ * Version : 1.1 - Bug fixes for orientation issues and added math functions
  */
 import XCTest
 

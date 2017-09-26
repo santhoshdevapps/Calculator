@@ -4,7 +4,7 @@
  * Date : 2017-09-23
  * StudentID : 300964037
  * Description : Simple calculator which performs basic opertions
- * Version : 1.0 - Built operation flow
+ * Version : 1.1 - Bug fixes for orientation issues and added math functions
 */
  import UIKit
 
@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var displayLabel: UILabel!
  
-
     // ACTIONS AND METHODS
     
     /*!
@@ -37,7 +36,7 @@ class ViewController: UIViewController {
         {
             displayLabel.text = String (sender.tag)
             numberOnScreen = Double(displayLabel.text!)!
-            print(numberOnScreen)
+        //    print(numberOnScreen)
             performingMath = false
         }
         else
@@ -77,6 +76,7 @@ class ViewController: UIViewController {
     if displayLabel.text != "" && sender.tag != 11 && sender.tag != 16
         {
             previousNumber = Double(displayLabel.text!)!
+            print(previousNumber)
             operation = sender.tag
             performingMath = true;
             
@@ -90,6 +90,12 @@ class ViewController: UIViewController {
                 results =  sqrt(previousNumber)
                 displayLabel.text = String ((results))
             }
+            else if operation == 20  //Sample variance
+            {
+                results =  (previousNumber * previousNumber)
+                displayLabel.text = String ((results))
+            }
+
     }
         else if sender.tag == 16
         {
