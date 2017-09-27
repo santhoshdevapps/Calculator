@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     // VARIABLES +++++++++++++++++++++++++++
     
-    var numberOnScreen:Double = 0;
+    var numberOnDisplay:Double = 0;
     var previousNumber:Double = 0;
     var performingMath = false;
     var operation = 0;
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         if performingMath == true
         {
             displayLabel.text = String (sender.tag)
-            numberOnScreen = Double(displayLabel.text!)!
+            numberOnDisplay = Double(displayLabel.text!)!
         //    print(numberOnScreen)
             performingMath = false
         }
@@ -44,13 +44,13 @@ class ViewController: UIViewController {
             if displayLabel.text == "0" {
                 // stops the user for entering multiple zero's as first digit
                 displayLabel.text = String(sender.tag)
-                numberOnScreen = Double(displayLabel.text!)!
+                numberOnDisplay = Double(displayLabel.text!)!
             }
             else
             {
                 
             displayLabel.text = displayLabel.text! + String(sender.tag)
-            numberOnScreen = Double(displayLabel.text!)!
+            numberOnDisplay = Double(displayLabel.text!)!
             // print(numberOnScreen)
             }
         }
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     @IBAction func decimal(_ sender: UIButton) {
        
             displayLabel.text = displayLabel.text! + String(".")
-            numberOnScreen = Double(displayLabel.text!)!
+            numberOnDisplay = Double(displayLabel.text!)!
         
     }
     
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
                 results =  sqrt(previousNumber)
                 displayLabel.text = String ((results))
             }
-            else if operation == 20  //Sample variance
+            else if operation == 20  //Sample variance(x^2)
             {
                 results =  (previousNumber * previousNumber)
                 displayLabel.text = String ((results))
@@ -101,23 +101,23 @@ class ViewController: UIViewController {
         {
             if operation == 12  // Divide
             {
-                results = previousNumber / numberOnScreen
+                results = previousNumber / numberOnDisplay
                 displayLabel.text = String (results)
             }
             else if operation == 13 // Multiply
             {
-                 results = previousNumber * numberOnScreen
+                 results = previousNumber * numberOnDisplay
                  displayLabel.text = String (results)
             }
             else if operation == 14  // Minus
             {
-                results = previousNumber - numberOnScreen
+                results = previousNumber - numberOnDisplay
                 displayLabel.text = String (results)
 
             }
             else if operation == 15   // Plus
             {
-                results = previousNumber + numberOnScreen
+                results = previousNumber + numberOnDisplay
                 displayLabel.text = String (results)
             }
         }
@@ -129,7 +129,7 @@ class ViewController: UIViewController {
     @IBAction func cancelButton(_ sender: UIButton) {
         displayLabel.text = "0"
         previousNumber = 0;
-        numberOnScreen = 0;
+        numberOnDisplay = 0;
         operation = 0;
 
     }
